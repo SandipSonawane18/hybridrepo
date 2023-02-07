@@ -1,8 +1,7 @@
 package testPackage;
-
 import java.io.IOException;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import genericpackage.BaseTest;
 import genericpackage.Flib;
@@ -10,7 +9,7 @@ import pagePackage.LoginPage;
 
 public class TestActiTimeValidLogin extends BaseTest {
 	@Test
-	public void testValidLogin () throws IOException
+	public void testValidLogin () throws IOException, InterruptedException
 	{
 		LoginPage lp = new LoginPage(driver);
 		Flib flib = new Flib();
