@@ -1,5 +1,6 @@
 package genericpackage;
 
+import org.openqa.selenium.Alert;
 import org.testng.Reporter;
 
 public class WebDriverCommonLib extends BaseTest {
@@ -10,4 +11,9 @@ public class WebDriverCommonLib extends BaseTest {
 		Reporter.log("The title Of Page"+pageName+" is "+titleOfPage);
 	}
 
+	 public void acceptAlert()
+	 {
+		 Alert al = driver.switchTo().alert();
+		 al.accept();
+	 }
 }

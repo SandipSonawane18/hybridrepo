@@ -60,8 +60,9 @@ public class BaseTest implements IAutoConstant {
 		}
 	}
 	@AfterMethod
-	public void teardown()
+	public void teardown() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		driver.quit();
 	}	
 }
